@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/faketoto/static/css/main.1b6150cd.chunk.css",
+    "main.js": "/faketoto/static/js/main.4ca0e285.chunk.js",
+    "main.js.map": "/faketoto/static/js/main.4ca0e285.chunk.js.map",
+    "runtime-main.js": "/faketoto/static/js/runtime-main.782d8404.js",
+    "runtime-main.js.map": "/faketoto/static/js/runtime-main.782d8404.js.map",
+    "static/js/2.bdb6016c.chunk.js": "/faketoto/static/js/2.bdb6016c.chunk.js",
+    "static/js/2.bdb6016c.chunk.js.map": "/faketoto/static/js/2.bdb6016c.chunk.js.map",
+    "static/js/3.7cd0fde5.chunk.js": "/faketoto/static/js/3.7cd0fde5.chunk.js",
+    "static/js/3.7cd0fde5.chunk.js.map": "/faketoto/static/js/3.7cd0fde5.chunk.js.map",
+    "index.html": "/faketoto/index.html",
+    "static/css/main.1b6150cd.chunk.css.map": "/faketoto/static/css/main.1b6150cd.chunk.css.map",
+    "static/js/2.bdb6016c.chunk.js.LICENSE.txt": "/faketoto/static/js/2.bdb6016c.chunk.js.LICENSE.txt",
+    "static/media/toto.1a58eb76.png": "/faketoto/static/media/toto.1a58eb76.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.782d8404.js",
+    "static/js/2.bdb6016c.chunk.js",
+    "static/css/main.1b6150cd.chunk.css",
+    "static/js/main.4ca0e285.chunk.js"
+  ]
+}
