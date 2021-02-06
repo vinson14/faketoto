@@ -9,7 +9,7 @@ const WinningNumbers = (props) => {
             </div>
             {winningNumbers.map((number) => {
                 return (
-                    <div className="col-2 light-grey-table">
+                    <div className="col-2 light-grey-table" key={number}>
                         <p className="text-center my-0 py-2">{number}</p>
                     </div>
                 );
