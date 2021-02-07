@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/www.faketoto.com/static/css/main.da0bfcf0.chunk.css",
-    "main.js": "/www.faketoto.com/static/js/main.7c972e19.chunk.js",
-    "main.js.map": "/www.faketoto.com/static/js/main.7c972e19.chunk.js.map",
-    "runtime-main.js": "/www.faketoto.com/static/js/runtime-main.55d10d77.js",
-    "runtime-main.js.map": "/www.faketoto.com/static/js/runtime-main.55d10d77.js.map",
-    "static/js/2.79710c9c.chunk.js": "/www.faketoto.com/static/js/2.79710c9c.chunk.js",
-    "static/js/2.79710c9c.chunk.js.map": "/www.faketoto.com/static/js/2.79710c9c.chunk.js.map",
-    "static/js/3.94a1191f.chunk.js": "/www.faketoto.com/static/js/3.94a1191f.chunk.js",
-    "static/js/3.94a1191f.chunk.js.map": "/www.faketoto.com/static/js/3.94a1191f.chunk.js.map",
-    "index.html": "/www.faketoto.com/index.html",
-    "static/css/main.da0bfcf0.chunk.css.map": "/www.faketoto.com/static/css/main.da0bfcf0.chunk.css.map",
-    "static/js/2.79710c9c.chunk.js.LICENSE.txt": "/www.faketoto.com/static/js/2.79710c9c.chunk.js.LICENSE.txt",
-    "static/media/toto.1a58eb76.png": "/www.faketoto.com/static/media/toto.1a58eb76.png"
+    "main.css": "/static/css/main.da0bfcf0.chunk.css",
+    "main.js": "/static/js/main.7c972e19.chunk.js",
+    "main.js.map": "/static/js/main.7c972e19.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6391bb17.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6391bb17.js.map",
+    "static/js/2.79710c9c.chunk.js": "/static/js/2.79710c9c.chunk.js",
+    "static/js/2.79710c9c.chunk.js.map": "/static/js/2.79710c9c.chunk.js.map",
+    "static/js/3.94a1191f.chunk.js": "/static/js/3.94a1191f.chunk.js",
+    "static/js/3.94a1191f.chunk.js.map": "/static/js/3.94a1191f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.da0bfcf0.chunk.css.map": "/static/css/main.da0bfcf0.chunk.css.map",
+    "static/js/2.79710c9c.chunk.js.LICENSE.txt": "/static/js/2.79710c9c.chunk.js.LICENSE.txt",
+    "static/media/toto.1a58eb76.png": "/static/media/toto.1a58eb76.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.55d10d77.js",
+    "static/js/runtime-main.6391bb17.js",
     "static/js/2.79710c9c.chunk.js",
     "static/css/main.da0bfcf0.chunk.css",
     "static/js/main.7c972e19.chunk.js"
