@@ -26,5 +26,24 @@ tr:nth-child(odd) {
 
 .selected {
     background-color: #0e537d;
-    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.selected button {
+    color: #ffffff !important;
+}
+
+.simulation-enter {
+    opacity: 0;
+}
+
+.simulation-enter-active {
+    opacity: 1;
+    transition: opacity 2000ms;
+}
+
+.btn-pri {
+    background-color: #0e537d;
+    border-color: #0e537d;
+    color: #ffffff !important;
 }

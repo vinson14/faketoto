@@ -1,7 +1,12 @@
 import React from "react";
 import totoLogo from "../static/img/toto.png";
+import numberWithCommas from "../utils/numberWithCommas";
 
-const NextDraw = () => {
+const NextDraw = (props) => {
+    const { groupOnePrize } = props;
+
+    const datetime = new Date(Date.now());
+
     return (
         <div className="col-12 col-md-6">
             <div className="row">
@@ -15,8 +20,10 @@ const NextDraw = () => {
                             <p className="my-0">Next Draw</p>
                         </div>
                         <div className="col-7 d-flex flex-column justify-content-center py-3">
-                            <p className="my-0">$5,000,000 est</p>
-                            <p className="my-0">Fri, 05 Feb 2021, 9.30pm</p>
+                            <p className="my-0">
+                                ${numberWithCommas(groupOnePrize)} est
+                            </p>
+                            <p className="my-0"> {datetime.toDateString()}</p>
                         </div>
                     </div>
                 </div>
