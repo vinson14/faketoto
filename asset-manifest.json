@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/faketoto/static/css/main.022046d7.chunk.css",
-    "main.js": "/faketoto/static/js/main.d6047065.chunk.js",
-    "main.js.map": "/faketoto/static/js/main.d6047065.chunk.js.map",
-    "runtime-main.js": "/faketoto/static/js/runtime-main.34768f9a.js",
-    "runtime-main.js.map": "/faketoto/static/js/runtime-main.34768f9a.js.map",
-    "static/js/2.79710c9c.chunk.js": "/faketoto/static/js/2.79710c9c.chunk.js",
-    "static/js/2.79710c9c.chunk.js.map": "/faketoto/static/js/2.79710c9c.chunk.js.map",
-    "static/js/3.94a1191f.chunk.js": "/faketoto/static/js/3.94a1191f.chunk.js",
-    "static/js/3.94a1191f.chunk.js.map": "/faketoto/static/js/3.94a1191f.chunk.js.map",
-    "index.html": "/faketoto/index.html",
-    "static/css/main.022046d7.chunk.css.map": "/faketoto/static/css/main.022046d7.chunk.css.map",
-    "static/js/2.79710c9c.chunk.js.LICENSE.txt": "/faketoto/static/js/2.79710c9c.chunk.js.LICENSE.txt",
-    "static/media/toto.1a58eb76.png": "/faketoto/static/media/toto.1a58eb76.png"
+    "main.css": "/www.faketoto.com/static/css/main.da0bfcf0.chunk.css",
+    "main.js": "/www.faketoto.com/static/js/main.7c972e19.chunk.js",
+    "main.js.map": "/www.faketoto.com/static/js/main.7c972e19.chunk.js.map",
+    "runtime-main.js": "/www.faketoto.com/static/js/runtime-main.55d10d77.js",
+    "runtime-main.js.map": "/www.faketoto.com/static/js/runtime-main.55d10d77.js.map",
+    "static/js/2.79710c9c.chunk.js": "/www.faketoto.com/static/js/2.79710c9c.chunk.js",
+    "static/js/2.79710c9c.chunk.js.map": "/www.faketoto.com/static/js/2.79710c9c.chunk.js.map",
+    "static/js/3.94a1191f.chunk.js": "/www.faketoto.com/static/js/3.94a1191f.chunk.js",
+    "static/js/3.94a1191f.chunk.js.map": "/www.faketoto.com/static/js/3.94a1191f.chunk.js.map",
+    "index.html": "/www.faketoto.com/index.html",
+    "static/css/main.da0bfcf0.chunk.css.map": "/www.faketoto.com/static/css/main.da0bfcf0.chunk.css.map",
+    "static/js/2.79710c9c.chunk.js.LICENSE.txt": "/www.faketoto.com/static/js/2.79710c9c.chunk.js.LICENSE.txt",
+    "static/media/toto.1a58eb76.png": "/www.faketoto.com/static/media/toto.1a58eb76.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.34768f9a.js",
+    "static/js/runtime-main.55d10d77.js",
     "static/js/2.79710c9c.chunk.js",
-    "static/css/main.022046d7.chunk.css",
-    "static/js/main.d6047065.chunk.js"
+    "static/css/main.da0bfcf0.chunk.css",
+    "static/js/main.7c972e19.chunk.js"
   ]
 }
