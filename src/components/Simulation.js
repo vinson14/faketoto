@@ -16,11 +16,11 @@ const Simulation = (props) => {
     } = props;
 
     return (
-        <div className="col-12">
+        <div className="col-12 col-md-6 col-lg-5">
             <div className="row justify-content-center">
                 <NextDraw groupOnePrize={groupOnePrize} />
 
-                <div className="col-10 col-md-5 col-lg-4">
+                <div className="col-10">
                     <TableHeader />
                     <WinningNumbers winningNumbers={winningNumbers} />
                     <AdditionalNumber additionalNumber={additionalNumber} />
