@@ -5,9 +5,8 @@ import {
     Route,
     useLocation,
 } from "react-router-dom";
-import About from "./pages/About";
 import styles from "./App.css";
-import NewHome from "./pages/NewHome";
+import Home from "./pages/Home";
 import Simulation from "./pages/Simulation";
 
 const App = () => {
@@ -15,11 +14,8 @@ const App = () => {
         <Router>
             <ScrollToTop />
             <Switch>
-                <Route exact path="/about">
-                    <About />
-                </Route>
-                <Route exact path="/new">
-                    <NewHome />
+                <Route exact path="/">
+                    <Home />
                 </Route>
                 <Route path="/simulation">
                     <Simulation />

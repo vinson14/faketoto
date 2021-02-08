@@ -5,9 +5,8 @@ import Intro from "../components/Intro";
 import Layout from "../components/Layout";
 import SelectNumbers from "../components/SelectNumbers";
 import SetJackpot from "../components/SetJackpot";
-import Simulation from "../pages/Simulation";
 
-const NewHome = () => {
+const Home = () => {
     //States to control rendering of components
     const [showIntro, setShowIntro] = useState(true);
     const [showSelectWinning, setShowSelectWinning] = useState(false);
@@ -142,4 +141,4 @@ const createQueryString = (numbers, addNum, jackpot) => {
     return query;
 };
 
-export default NewHome;
+export default Home;
