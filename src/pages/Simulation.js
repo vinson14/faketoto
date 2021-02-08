@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
 import AdditionalNumber from "../components/AdditionalNumber";
 import GroupOnePrize from "../components/GroupOnePrize";
 import Layout from "../components/Layout";
@@ -27,26 +28,43 @@ const Simulation = () => {
     const jackpot = query.get("jackpot");
 
     return (
-        <Layout>
-            <Row>
-                <div className="col-12">
-                    <div className="row justify-content-center">
-                        <NextDraw jackpot={jackpot} />
+        <CSSTransition
+            in={true}
+            appear={true}
+            timeout={{
+                appear: 1000,
+                enter: 1000,
+                exit: 0,
+            }}
+            mountOnEnter
+            unmountOnExit
+            classNames="transition"
+        >
+            <Layout>
+                <Row>
+                    <div className="col-12 col-md-6">
+                        <div className="row justify-content-center">
+                            <NextDraw jackpot={jackpot} />
 
-                        <div className="col-10 col-md-5 col-lg-4">
-                            <TableHeader />
-                            <WinningNumbers winningNumbers={winningNumbers} />
-                            <AdditionalNumber
-                                additionalNumber={additionalNumber}
-                            />
-                            <GroupOnePrize jackpot={jackpot} />
-                            <WinningShares jackpot={jackpot} />
+                            <div className="col-10">
+                                <TableHeader />
+                                <WinningNumbers
+                                    winningNumbers={winningNumbers}
+                                />
+                                <AdditionalNumber
+                                    additionalNumber={additionalNumber}
+                                />
+                                <GroupOnePrize jackpot={jackpot} />
+                                <WinningShares jackpot={jackpot} />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <ReturnHome />
-            </Row>
-        </Layout>
+                </Row>
+                <Row>
+                    <ReturnHome />
+                </Row>
+            </Layout>
+        </CSSTransition>
     );
 };
 

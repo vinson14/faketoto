@@ -6,7 +6,7 @@ const ReturnHome = (props) => {
     return (
         <div className="col-5 d-flex justify-content-center">
             <Button>
-                <Link to="/new">Back</Link>
+                <Link to="/">Back</Link>
             </Button>
         </div>
     );

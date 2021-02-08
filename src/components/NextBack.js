@@ -2,9 +2,13 @@ import React from "react";
 import Button from "./Button";
 
 const NextBack = (props) => {
-    const { showThis, showNext, showBack } = props;
+    const { showThis, showNext, showBack, validation } = props;
 
     const next = () => {
+        if (validation().error) {
+            alert(validation().error);
+            return;
+        }
         showThis(false);
         showNext(true);
     };

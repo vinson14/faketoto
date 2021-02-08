@@ -8,7 +8,7 @@ const NextDraw = (props) => {
     const datetime = new Date(Date.now());
 
     return (
-        <div className="col-12 col-md-6">
+        <div className="col-12">
             <div className="row">
                 <div className="col-3 d-flex justify-content-center align-items-center">
                     <img src={totoLogo} alt="Toto Logo" className="img-fluid" />

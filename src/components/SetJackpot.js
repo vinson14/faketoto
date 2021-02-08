@@ -5,7 +5,20 @@ const SetJackpot = (props) => {
     const { jackpot, setJackpot, showThis, showNext, showBack } = props;
 
     const handleInputChange = (event) => {
-        setJackpot(event.target.value);
+        const re = /^[0-9\b]+$/;
+        if (event.target.value === "" || re.test(event.target.value)) {
+            setJackpot(event.target.value);
+        }
+    };
+
+    const validation = () => {
+        if (!jackpot) {
+            return { error: "Please do not leave this blank" };
+        } else if (!Number.isInteger(parseInt(jackpot))) {
+            return { error: "Only numbers are allowed" };
+        } else {
+            return {};
+        }
     };
 
     return (
@@ -29,6 +42,7 @@ const SetJackpot = (props) => {
                 showThis={showThis}
                 showNext={showNext}
                 showBack={showBack}
+                validation={validation}
             />
         </div>
     );

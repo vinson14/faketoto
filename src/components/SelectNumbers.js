@@ -45,6 +45,14 @@ const SelectNumbers = (props) => {
         setNumbers([...numbers, number]);
     };
 
+    const validation = () => {
+        if (numbers.length !== maxSelection) {
+            return { error: `Please select ${maxSelection} numbers` };
+        } else {
+            return {};
+        }
+    };
+
     return (
         <div className="row my-3 justify-content-center">
             <div className="col-12 text-center">
@@ -76,6 +84,7 @@ const SelectNumbers = (props) => {
                 showThis={showThis}
                 showNext={showNext}
                 showBack={showBack}
+                validation={validation}
             />
         </div>
     );
