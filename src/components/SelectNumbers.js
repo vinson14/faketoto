@@ -1,7 +1,17 @@
 import React from "react";
+import Button from "./Button";
+import NextBack from "./NextBack";
 
 const SelectNumbers = (props) => {
-    const { title, numbers, setNumbers, maxSelection } = props;
+    const {
+        title,
+        numbers,
+        setNumbers,
+        maxSelection,
+        showBack,
+        showNext,
+        showThis,
+    } = props;
 
     // Create numbers from 1 to 49 in an array
     const allNumbers = [];
@@ -36,28 +46,37 @@ const SelectNumbers = (props) => {
     };
 
     return (
-        <div className="row my-3">
+        <div className="row my-3 justify-content-center">
             <div className="col-12 text-center">
                 <h6>
                     Select {maxSelection} {title}
                 </h6>
             </div>
+            <div className="col-12">
+                <div className="row">
+                    {allNumbers.map((number) => {
+                        // Ensures that the selected numbers are highlighted to the user
+                        const selected = numbers.includes(number);
 
-            {allNumbers.map((number) => {
-                // Ensures that the selected numbers are highlighted to the user
-                const selected = numbers.includes(number);
-
-                return (
-                    <div
-                        className={`col-2 d-flex justify-content-center ${
-                            selected && "selected"
-                        }`}
-                        onClick={(e) => selectNumber(number, e)}
-                    >
-                        <button className="btn">{number}</button>
-                    </div>
-                );
-            })}
+                        return (
+                            <div
+                                key={number}
+                                className={`col-2 d-flex justify-content-center ${
+                                    selected && "selected"
+                                }`}
+                                onClick={(e) => selectNumber(number, e)}
+                            >
+                                <button className="btn">{number}</button>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+            <NextBack
+                showThis={showThis}
+                showNext={showNext}
+                showBack={showBack}
+            />
         </div>
     );
 };

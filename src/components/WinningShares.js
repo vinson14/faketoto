@@ -2,12 +2,12 @@ import React from "react";
 import numberWithCommas from "../utils/numberWithCommas";
 
 const WinningShares = (props) => {
-    const { groupOnePrize } = props;
+    const { jackpot } = props;
 
     const winningShares = [
         {
             group: 1,
-            shareAmount: groupOnePrize,
+            shareAmount: jackpot,
             shares: 1,
         },
         {

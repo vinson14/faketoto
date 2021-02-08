@@ -2,7 +2,7 @@ import React from "react";
 import numberWithCommas from "../utils/numberWithCommas";
 
 const GroupOnePrize = (props) => {
-    const { groupOnePrize } = props;
+    const { jackpot } = props;
 
     return (
         <div className="row mt-3">
@@ -11,7 +11,7 @@ const GroupOnePrize = (props) => {
             </div>
             <div className="col-12 light-grey-table">
                 <p className="text-center my-0 py-2">
-                    ${numberWithCommas(groupOnePrize)}
+                    ${numberWithCommas(jackpot)}
                 </p>
             </div>
         </div>
