@@ -3,7 +3,7 @@ import totoLogo from "../static/img/toto.png";
 import numberWithCommas from "../utils/numberWithCommas";
 
 const NextDraw = (props) => {
-    const { groupOnePrize } = props;
+    const { jackpot } = props;
 
     const datetime = new Date(Date.now());
 
@@ -21,7 +21,7 @@ const NextDraw = (props) => {
                         </div>
                         <div className="col-7 d-flex flex-column justify-content-center py-3">
                             <p className="my-0">
-                                ${numberWithCommas(groupOnePrize)} est
+                                ${numberWithCommas(jackpot)} est
                             </p>
                             <p className="my-0"> {datetime.toDateString()}</p>
                         </div>
