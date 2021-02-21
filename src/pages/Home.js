@@ -9,8 +9,7 @@ import SetJackpot from "../components/SetJackpot";
 const Home = () => {
     //States to control rendering of components
     const [showIntro, setShowIntro] = useState(true);
-    const [showSelectWinning, setShowSelectWinning] = useState(false);
-    const [showSelectAdd, setShowSelectAdd] = useState(false);
+    const [showSelectNumbers, setShowSelectNumbers] = useState(false);
     const [showSetJackpot, setShowSetJackpot] = useState(false);
     const [showSimulation, setShowSimulation] = useState(false);
 
@@ -34,10 +33,10 @@ const Home = () => {
                 unmountOnExit
                 classNames="transition"
             >
-                <Intro setShowSelectWinning={setShowSelectWinning} />
+                <Intro setShowSelectWinning={setShowSelectNumbers} />
             </CSSTransition>
             <CSSTransition
-                in={showSelectWinning}
+                in={showSelectNumbers}
                 timeout={{
                     appear: timeout,
                     enter: timeout,
@@ -50,34 +49,14 @@ const Home = () => {
             >
                 <SelectNumbers
                     title="Winning Numbers"
-                    numbers={winningNumbers}
-                    setNumbers={setWinningNumbers}
+                    winningNumbers={winningNumbers}
+                    setWinningNumbers={setWinningNumbers}
+                    additionalNumber={additionalNumber}
+                    setAdditionalNumber={setAdditionalNumber}
                     maxSelection={6}
-                    showNext={setShowSelectAdd}
-                    showBack={setShowIntro}
-                    showThis={setShowSelectWinning}
-                />
-            </CSSTransition>
-            <CSSTransition
-                in={showSelectAdd}
-                timeout={{
-                    appear: timeout,
-                    enter: timeout,
-                    exit: 0,
-                }}
-                mountOnEnter
-                unmountOnExit
-                classNames="transition"
-                onEnter={() => setShowSelectWinning(false)}
-            >
-                <SelectNumbers
-                    title="Additional Number"
-                    numbers={additionalNumber}
-                    setNumbers={setAdditionalNumber}
-                    maxSelection={1}
                     showNext={setShowSetJackpot}
-                    showBack={setShowSelectWinning}
-                    showThis={setShowSelectAdd}
+                    showBack={setShowIntro}
+                    showThis={setShowSelectNumbers}
                 />
             </CSSTransition>
             <CSSTransition
@@ -95,7 +74,7 @@ const Home = () => {
                     jackpot={jackpot}
                     setJackpot={setJackpot}
                     showThis={setShowSetJackpot}
-                    showBack={setShowSelectAdd}
+                    showBack={setShowSelectNumbers}
                     showNext={setShowSimulation}
                 />
             </CSSTransition>

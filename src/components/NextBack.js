@@ -19,14 +19,16 @@ const NextBack = (props) => {
     };
 
     return (
-        <>
-            <div className="col-3 d-flex justify-content-center">
-                <Button onClick={back}>Back</Button>
+        <div className="col-12">
+            <div className="row justify-content-center">
+                <div className="col-3 d-flex justify-content-center">
+                    <Button onClick={back}>Back</Button>
+                </div>
+                <div className="col-3 d-flex justify-content-center">
+                    <Button onClick={next}>Next</Button>
+                </div>
             </div>
-            <div className="col-3 d-flex justify-content-center">
-                <Button onClick={next}>Next</Button>
-            </div>
-        </>
+        </div>
     );
 };
 

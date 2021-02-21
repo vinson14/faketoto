@@ -7,6 +7,14 @@ button a {
     text-decoration: none;
 }
 
+.number {
+    border: 1px solid #ffffff;
+}
+
+.number:hover {
+    cursor: pointer;
+}
+
 .table-header {
     background-color: #004b8c;
     color: #f4f4f4;
@@ -34,12 +42,15 @@ tr:nth-child(odd) {
 }
 
 .selected {
+    color: white !important;
     background-color: #0e537d;
     border: 1px solid #ffffff;
 }
 
-.selected button {
-    color: #ffffff !important;
+.selected-additional {
+    color: white !important;
+    background-color: #0e7d40;
+    border: 1px solid #ffffff;
 }
 
 .btn-pri {

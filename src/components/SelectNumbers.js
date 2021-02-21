@@ -1,17 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import NextBack from "./NextBack";
 
 const SelectNumbers = (props) => {
     const {
-        title,
-        numbers,
-        setNumbers,
-        maxSelection,
+        winningNumbers,
+        setWinningNumbers,
+        additionalNumber,
+        setAdditionalNumber,
         showBack,
         showNext,
         showThis,
     } = props;
+
+    const [winningNumbersComplete, setWinningNumbersComplete] = useState(false);
 
     // Create numbers from 1 to 49 in an array
     const allNumbers = [];
@@ -19,62 +21,93 @@ const SelectNumbers = (props) => {
         allNumbers.push(i);
     }
 
+    useEffect(() => {
+        if (winningNumbers.length === 6) {
+            setWinningNumbersComplete(true);
+        } else {
+            setWinningNumbersComplete(false);
+        }
+    }, [winningNumbers]);
+
     const selectNumber = (number, e) => {
-        var numbersCopy = [...numbers];
+        var winningNumbersCopy = [...winningNumbers];
 
         // Checks if the number is already selected
-        for (var i = 0; i < numbersCopy.length; i++) {
+        for (var i = 0; i < winningNumbersCopy.length; i++) {
             // If the number is selected, this action unselects it
-            if (numbersCopy[i] === number) {
-                numbersCopy.splice(i, 1);
-                setNumbers(numbersCopy);
+            if (winningNumbersCopy[i] === number) {
+                winningNumbersCopy.splice(i, 1);
+                setWinningNumbers(winningNumbersCopy);
 
                 e.currentTarget.classList.toggle("selected");
+                return;
+            } else if (
+                additionalNumber.length === 1 &&
+                additionalNumber[0] === number
+            ) {
+                setAdditionalNumber([]);
+                e.currentTarget.classList.toggle("selected-additional");
                 return;
             }
         }
 
-        // Checks if the maximum number of numbers have been selected already
-        if (numbers.length === maxSelection) {
-            alert(`You can only select ${maxSelection} ${title}`);
-            return;
-        }
-
         // Otherwise select the number
-        e.currentTarget.classList.toggle("selected");
-        setNumbers([...numbers, number]);
+        if (!winningNumbersComplete) {
+            console.log("this runs");
+            e.currentTarget.classList.toggle("selected");
+            setWinningNumbers([...winningNumbers, number]);
+        } else {
+            console.log("this ran");
+            e.currentTarget.classList.toggle("selected-additional");
+            setAdditionalNumber([number]);
+        }
     };
 
     const validation = () => {
-        if (numbers.length !== maxSelection) {
-            return { error: `Please select ${maxSelection} numbers` };
+        if (winningNumbersComplete && additionalNumber.length === 0) {
+            return { error: "Please select 1 additional number" };
+        } else if (!winningNumbersComplete) {
+            return { error: "Please select 6 winning numbers" };
         } else {
             return {};
+        }
+    };
+
+    const displayText = () => {
+        if (!winningNumbersComplete) {
+            return "Select 6 Winning Numbers";
+        } else if (additionalNumber.length === 0) {
+            return "Select 1 Additional Number";
+        } else {
+            return "Click next to continue";
         }
     };
 
     return (
         <div className="row my-3 justify-content-center">
             <div className="col-12 text-center">
-                <h6>
-                    Select {maxSelection} {title}
-                </h6>
+                <h6>{displayText()}</h6>
             </div>
-            <div className="col-12">
+            <div className="col-12 col-md-8">
                 <div className="row">
                     {allNumbers.map((number) => {
-                        // Ensures that the selected numbers are highlighted to the user
-                        const selected = numbers.includes(number);
+                        // Highlight the selected numbers
+                        const selected = winningNumbers.includes(number);
+                        const selectedAdditional = additionalNumber.includes(
+                            number
+                        );
 
                         return (
                             <div
                                 key={number}
-                                className={`col-2 d-flex justify-content-center ${
+                                className={`col-2 p-2 number d-flex justify-content-center ${
                                     selected && "selected"
+                                } ${
+                                    selectedAdditional && "selected-additional"
                                 }`}
                                 onClick={(e) => selectNumber(number, e)}
                             >
-                                <button className="btn">{number}</button>
+                                {number}
                             </div>
                         );
                     })}
